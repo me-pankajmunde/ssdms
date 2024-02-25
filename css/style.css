@@ -147,11 +147,14 @@ h6,
     position: absolute;
     width: 100%;
     height: 100%;
+
+    
+    
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .5);
+    /* background: rgba(0, 0, 0, .5); */
 }
 
 @media (max-width: 768px) {
@@ -1797,13 +1800,56 @@ body {
     height: auto;
 }
 
+#team-carousel {
+    max-width: 70%;
+    margin-left: 16%;
+    margin-top: -16%;
+}
 
-@media(min-width: 340px) {
+.team-text{
+    text-align: center;
+    margin-top: 90%;
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+}
+
+.team-title h5{
+    color: white;
+}
+
+/* #mainCarousel{
+    max-width: 100%;
+    max-height: 50%;
+    margin-left: 16%;
+    margin-top: -16%;
+} */
+
+@media (max-width: 560px) {
     .break-line {
         display: block;
     }
-
-    /* .card-text {
-        white-space: normal !important;
-    } */
+    .owl-stage-outer {
+        max-height: 220px;
+    }
+    .owl-prev {
+        font-size: 20px !important;
+    }
+    .owl-next {
+        font-size: 20px !important;
+    }
+    #team-carousel {
+        max-width: 70%;
+        margin-left: 16%;
+        margin-top: -16%;
+    }
+    .team-text{
+        text-align: center;
+        margin-top: -23%;
+        background-color: rgb(0,0,0,0.5);
+        color: white;
+    }
+    
+    .team-title h5{
+        color: white;
+    }
 }
