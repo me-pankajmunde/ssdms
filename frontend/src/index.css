@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif;
+    @apply bg-cream text-dark m-0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Noto Sans Devanagari', serif;
+  }
+
+  .marathi {
+    font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-light;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .btn-saffron {
+    @apply bg-saffron text-white hover:bg-orange-600;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .card-header {
+    @apply p-4 border-b border-gray-100;
+  }
+
+  .card-body {
+    @apply p-4;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+
+  .input-error {
+    @apply border-error focus:ring-error;
+  }
+
+  .label {
+    @apply block font-medium mb-2 text-dark;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-dark mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-8;
+  }
+
+  .panchang-card {
+    @apply bg-gradient-to-br from-primary/10 to-saffron/10 border border-primary/20 rounded-xl p-4;
+  }
+
+  .tithi-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-saffron/20 text-saffron;
+  }
+
+  .nakshatra-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary-dark;
+  }
+
+  .event-card {
+    @apply card overflow-hidden;
+  }
+
+  .event-card-header {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-white p-4;
+  }
+
+  .donation-amount-btn {
+    @apply px-4 py-2 border-2 border-primary/30 rounded-lg hover:border-primary hover:bg-primary/10 transition-all cursor-pointer;
+  }
+
+  .donation-amount-btn.selected {
+    @apply border-primary bg-primary text-white;
+  }
+
+  .sidebar-link {
+    @apply flex items-center px-4 py-3 text-gray-700 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors;
+  }
+
+  .sidebar-link.active {
+    @apply bg-primary/10 text-primary font-medium;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-saffron bg-clip-text text-transparent;
+  }
+
+  .shadow-temple {
+    box-shadow: 0 4px 20px rgba(234, 166, 54, 0.15);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fc { font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif; }
+.fc .fc-toolbar-title { font-family: 'Playfair Display', serif; @apply text-2xl text-dark; }
+.fc .fc-button-primary { @apply bg-primary border-primary hover:bg-primary-dark; }
+.fc .fc-day-today { @apply bg-primary/10; }
+.fc .fc-event { @apply bg-primary border-primary rounded cursor-pointer; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { @apply bg-gray-100 rounded; }
+::-webkit-scrollbar-thumb { @apply bg-primary/50 rounded hover:bg-primary; }
