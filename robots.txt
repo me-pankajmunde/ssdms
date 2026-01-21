@@ -1,0 +1,13 @@
+# robots.txt for श्री समर्थ धोंडुतात्या महाराज मंदिर
+# Website: SSDMS Temple, Dongarshelki, Latur, Maharashtra
+
+User-agent: *
+Allow: /
+Disallow: /img2_old/
+Disallow: /scss/
+
+# Sitemap
+Sitemap: https://www.ssdmstemple.org/sitemap.xml
+
+# Crawl delay (optional, for slow servers)
+# Crawl-delay: 1
